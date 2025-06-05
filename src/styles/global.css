@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: "PT Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #f8f9fa;
+    color: #222;
+}
+h1 {
+    margin-bottom: 3rem;
+    text-align: center;
+    font-size: 4rem;
+}
+section{
+    margin: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* classes */
+.tabWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+.tabCards{
+    padding: 0.6rem 1.2rem;
+    font-size: 1.6rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.tabCards:hover{
+    font-weight: bold;
+    background-color: #f5f5f5;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+    transform: scale(1.03);
+}
+.activeTab{
+    font-weight: bold;
+    background-color: #f5f5f5;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+}
