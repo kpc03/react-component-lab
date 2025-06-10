@@ -1,8 +1,10 @@
 import React from 'react';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import componentsMap from '../data/componentList';
 
 const Home = () => {
+    const navigate = useNavigate();
     const [selectedLetter, setSelectedLetter] = useState('A');
     const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');    
 
@@ -14,7 +16,7 @@ const Home = () => {
     }    
 
     return(
-        <>
+        <section>
             <h1>A to Z React Components</h1>
             <div className='tabWrapper' onClick={tabWrapperHandler}>
                 {alphabet.map((letter,i)=>{
@@ -23,14 +25,14 @@ const Home = () => {
                     );
                 })}
             </div>
-            <div>
-                {componentsMap[selectedLetter] && componentsMap[selectedLetter].map((item, i)=> {
-                    return(
-                        <div className='tabContentCard' key={i}>{item}</div>
-                    );
-                })}
+            <div className='flexWrapper itemCenter'>
+                {componentsMap[selectedLetter] ? componentsMap[selectedLetter].map((item, i)=> {
+                        return <div className='tabContentCard' key={i} onClick={() => navigate(`/component/${item}`)}>{item}</div>
+                    })
+                    : <h1>Coming Soon</h1>
+                }
             </div>
-        </>
+        </section>
     );
 }
 

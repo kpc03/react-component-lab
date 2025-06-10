@@ -1,0 +1,39 @@
+.accordionWrapper{
+    max-width: 700px;
+}
+.accordionHeader{
+    padding: 20px;
+    background-color: #5f9ea0ab;
+    cursor: pointer;
+    border-bottom: 1px solid #5f9ea0;
+}
+.accordionHeader h3, .accordionHeader span{
+    font-size: 2.4rem;
+    line-height: 1.2;
+}
+.accordionContent {
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  max-height: 0;
+  padding: 0 20px; /* Horizontal padding stays */
+}
+
+.accordionInner {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  padding: 12px 0; /* vertical padding now inside */
+}
+
+.accordionContent.show {
+  max-height: 500px;
+}
+
+.accordionContent.show .accordionInner {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.accordionInner p {
+    font-size: 2.4rem;
+}
