@@ -2,6 +2,9 @@
     max-width: 700px;
     border-bottom: 1px solid #5f9ea0;
 }
+.accordionWrapper:last-child{
+  border-bottom: 0;
+}
 .accordionHeader{
     padding: 20px;
     background-color: #5f9ea0ab;
@@ -11,7 +14,7 @@
     border-radius: 0;
 }
 .accordionHeader:focus {
-  outline: 2px solid #5f9ea0;
+  outline: 1px solid #5f9ea0;
 }
 .accordionHeader h3, .accordionHeader span{
     font-size: 2.4rem;
