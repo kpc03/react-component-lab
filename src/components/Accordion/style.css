@@ -1,11 +1,11 @@
 .accordionWrapper{
     max-width: 700px;
+    border-bottom: 1px solid #5f9ea0;
 }
 .accordionHeader{
     padding: 20px;
     background-color: #5f9ea0ab;
     cursor: pointer;
-    border-bottom: 1px solid #5f9ea0;
     border: none;
     width: 100%;
     border-radius: 0;
@@ -21,14 +21,14 @@
   overflow: hidden;
   transition: max-height 0.4s ease;
   max-height: 0;
-  padding: 0 20px; /* Horizontal padding stays */
+  padding: 0 20px;
 }
 
 .accordionInner {
   opacity: 0;
   transform: translateY(-10px);
   transition: opacity 0.3s ease, transform 0.3s ease;
-  padding: 12px 0; /* vertical padding now inside */
+  padding: 12px 0;
 }
 
 .accordionContent.show {
