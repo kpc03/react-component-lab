@@ -1,16 +1,14 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Home from "./pages/Home";
 import ComponentPage from './pages/ComponentPage';
 
 function App() {
   return(
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/component/:componentName" element={<ComponentPage/>}/>
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home/>}/>
+      <Route path="/component/:componentName" element={<ComponentPage/>}/>
+    </Routes>
   );
 }
 export default App;
