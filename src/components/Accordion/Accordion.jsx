@@ -16,13 +16,13 @@ const Accordion = () => {
         {list.map((item, i) => {
           return (
             <div key={i} className="accordionWrapper">
-              <div
+              <button
                 className="accordionHeader flexWrapper spaceBetween"
                 onClick={() => toggleAccordion(i)}
               >
                 <h3>{item.question}</h3>
                 <span>{activeIndex === i ? "-" : "+"}</span>
-              </div>
+              </button>
               <div
                 className={`accordionContent ${
                   activeIndex === i ? "show" : ""
