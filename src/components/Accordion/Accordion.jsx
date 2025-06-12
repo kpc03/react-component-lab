@@ -19,6 +19,8 @@ const Accordion = () => {
               <button
                 className="accordionHeader flexWrapper spaceBetween"
                 onClick={() => toggleAccordion(i)}
+                aria-expanded={activeIndex === i}
+                aria-controls={`accordion-panel-${i}`}
               >
                 <h3>{item.question}</h3>
                 <span>{activeIndex === i ? "-" : "+"}</span>
@@ -27,6 +29,8 @@ const Accordion = () => {
                 className={`accordionContent ${
                   activeIndex === i ? "show" : ""
                 }`}
+                aria-labelledby={`accordion-header-${i}`}
+                role="region"
               >
                 <div className="accordionInner">
                   <p>{item.answer}</p>
