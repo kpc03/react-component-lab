@@ -24,6 +24,7 @@
   overflow: hidden;
   transition: max-height 0.4s ease;
   max-height: 0;
+  will-change: max-height, opacity;
   padding: 0 20px;
 }
 
