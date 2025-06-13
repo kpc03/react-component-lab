@@ -11,5 +11,3 @@ Welcome to **React Component Lab**, a modular and interactive collection of Reac
 - ⚛️ Built using **React** and **Vite** for blazing-fast development
 - 🔄 Dynamic routing for component detail pages
 - 💡 Designed for learning, demoing, or documenting internal UI kits
-
----
